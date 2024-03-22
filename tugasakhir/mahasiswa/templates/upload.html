@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+    <h1>Upload syarat-syarat Pendaftaran Ujian Sidang Tugas Akhir</h1>
+</center>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            {% if message %}
+                <div class="alert alert-success">{{ message }}</div>
+            {% endif %}
+            <form action="/upload/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div>
+                    <label for="id_judul">Judul:</label>
+                
+                
+                
+                <input type="text" name="judul" class="form-control" name="Judul Tugas Akhir" maxlength="50" required id="id_judul">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_acc_ujian">Acc ujian:</label>
+                
+                
+                
+                <input type="file" name="acc_ujian" class="form-control" label="Judul Tugas Akhir" accept="image/*" required id="id_acc_ujian">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_bebas_teori">Bebas teori:</label>
+                
+                
+                
+                <input type="file" name="bebas_teori" class="form-control" accept="image/*" required id="id_bebas_teori">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_krs">Krs:</label>
+                
+                
+                
+                <input type="file" name="krs" class="form-control" accept="image/*" required id="id_krs">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_cek_plagiasi">Cek plagiasi:</label>
+                
+                
+                
+                <input type="file" name="cek_plagiasi" class="form-control" accept="image/*" required id="id_cek_plagiasi">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_file_tugas_akhir">File tugas akhir:</label>
+                
+                
+                
+                <input type="file" name="file_tugas_akhir" class="form-control" accept="image/*" required id="id_file_tugas_akhir">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_sk_diterima">Sk diterima:</label>
+                
+                
+                
+                <input type="file" name="sk_diterima" class="form-control" accept="image/*" required id="id_sk_diterima">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_sk_selesai">Sk selesai:</label>
+                
+                
+                
+                <input type="file" name="sk_selesai" class="form-control" accept="image/*" required id="id_sk_selesai">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_lembar_penilaian">Lembar penilaian:</label>
+                
+                
+                
+                <input type="file" name="lembar_penilaian" class="form-control" accept="image/*" required id="id_lembar_penilaian">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_kepemilikan_usaha">Kepemilikan usaha:</label>
+                
+                
+                
+                <input type="file" name="kepemilikan_usaha" class="form-control" accept="image/*" required id="id_kepemilikan_usaha">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_bukti_mou_spk">Bukti mou spk:</label>
+                
+                
+                
+                <input type="file" name="bukti_mou_spk" class="form-control" accept="image/*" required id="id_bukti_mou_spk">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_ijazah_terakhir">Ijazah terakhir:</label>
+                
+                
+                
+                <input type="file" name="ijazah_terakhir" class="form-control" accept="image/*" required id="id_ijazah_terakhir">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_akte_kelahiran">Akte kelahiran:</label>
+                
+                
+                
+                <input type="file" name="akte_kelahiran" class="form-control" accept="image/*" required id="id_akte_kelahiran">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_ktp_kk">Ktp kk:</label>
+                
+                
+                
+                <input type="file" name="ktp_kk" class="form-control" accept="image/*" required id="id_ktp_kk">
+                    
+                </div>
+                
+                  <div>
+                    <label for="id_foto">Foto:</label>
+                
+                
+                
+                <input type="file" name="foto" class="form-control" accept="image/*" required id="id_foto">
+                    
+                      
+                    
+                </div>
+            
+                <br><button class="btn btn-primary"><i class="fa fa-floppy-disk"></i></button>
+                <a href="#" class="btn btn-danger"><i class="fa fa-xmark"></i></a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
