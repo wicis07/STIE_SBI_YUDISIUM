@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <center>
+    <h1>UBAH DATA UPLOAD PERSYARATAN</h1>
+  </center><br />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        {% for message in messages %}
+          {% if message %}
+            <div class="alert alert-success">{{ message }}</div>
+          {% endif %}
+        {% endfor %}
+        <form action="{% url 'ubah_tugasakhir' tugasakhir.id %}" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{form}}
+
+          <br /><button class="btn btn-primary"><i class="fa fa-floppy-disk"></i></button>
+          <a href="/data-upload" class="btn btn-danger"><i class="fa fa-arrow-left"></i></a>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

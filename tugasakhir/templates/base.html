@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Mahasiswa</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'js/jquery-3.7.1.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home">STIE SBI</a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+          <ul class="navbar-nav me-auto mb-2">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/upload">Pendaftaran Tugas Akhir</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dashboard</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/mahasiswa">Data Mahasiswa</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/data-upload">Data Pendaftaran Tugas Akhir</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="btn btn-success">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+  </body>
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item">
+        <a href="/home" class="nav-link px-2 text-body-secondary">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="http://stie-sbi.ac.id/?lang=id" class="nav-link px-2 text-body-secondary">SBI</a>
+      </li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2024 Mu'alif Ihwan Kurniawan</p>
+  </footer>
+</html>
